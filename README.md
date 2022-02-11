@@ -9,7 +9,7 @@
 *: Equal Contribution
 
 ### Introduction
-This repo contains implementation of the group VSA and binary HDC model with random Fourier feature (RFF) encoding, described in the paper Understanding Hyperdimensional Computing for Parallel Single-Pass Learning.
+This repo contains implementation of the group VSA and binary HDC model with random Fourier feature (RFF) encoding, described in the paper [Understanding Hyperdimensional Computing for Parallel Single-Pass Learning](https://arxiv.org/abs/2202.04805).
 
 Our RFF method and group VSA can outperform the state-of-the-art HDC model while maintaining hardware efficiency. For example, on MNIST,
 
@@ -52,5 +52,12 @@ $ python main.py -gamma 0.3 -epoch 10 -gorder 8 -dim 10000 -dataset mnist -model
 ### Citation
 If you find this repo useful, please cite:
 ```
-
+@article{yu2022understanding,
+      title={Understanding Hyperdimensional Computing for Parallel Single-Pass Learning}, 
+      author={Tao Yu and Yichi Zhang and Zhiru Zhang and Christopher De Sa},
+      year={2022},
+      eprint={2202.04805},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
