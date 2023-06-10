@@ -129,7 +129,7 @@ class RandomFourierEncoder:
         for i in range(num_pixels):
             # for each pixel, shift along hyperD dimension
             rv[i] = torch.roll(rv[i], shifts=783 - i,
-                               dims=2)  # note that this batch shifting might be different from our v1
+                               dims=-1)  # note that this batch shifting might be different from our v1
         rv = torch.sum(rv, dim=0)  # use sum, natural extends to group bind, result shape: [channels, bs, hyperD]
         #         rv = torch.fmod(torch.sum(rv, dim=0), self.gorder) # mathly same since we use cos in the GModel
         if self.gorder == 2:
